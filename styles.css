@@ -66,9 +66,12 @@ body {
     transition: opacity ease 500ms;
 }
 
-.card__image-wrapper:hover .card__image-overlay {
-    opacity: 1;
+@media (hover:hover) { 
+    .card__image-wrapper:hover .card__image-overlay {
+        opacity: 1;
+    }
 }
+
 
 .card__body {
     margin: 20px 0 10px;
