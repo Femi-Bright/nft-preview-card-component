@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: #8bacda;
+    --cyan: #00fff7;
+    --cyan-overlay: rgba(0, 255, 247, .5);
+
+    --very-dark-blue-main: #0d192b;
+    --very-dark-blue-card: #14253d;
+    --very-dark-blue-line: #2f415b;
+    --white: #ffffff;
+
+    --font-light: 300;
+    --font-medium: 400;
+    --font-semibold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--very-dark-blue-main);
+    display: grid;
+    font-size: 18px;
+    height: 100vh;
+    place-content: center;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card);
+    border-radius: 20px;
+    max-width: 340px;
+    padding: 25px;
+}
+
+.card__image-wrapper {
+    border-radius: 10px;
+    cursor: pointer;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__image {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__image-overlay {
+    background-color: var(--cyan-overlay);
+    display: grid;
+    height: 100%;
+    opacity: 0;
+    place-content: center;
+    position: absolute;
+    inset: 0;
+    transition: opacity ease 500ms;
+}
+
+.card__image-wrapper:hover .card__image-overlay {
+    opacity: 1;
+}
+
+.card__body {
+    margin: 20px 0 10px;
+}
+
+.product-name {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--font-semibold);
+    margin-bottom: 15px;
+}
+
+.product-info {
+    color: var(--soft-blue);
+    font-weight: var(--font-light);
+    margin-bottom: 15px;
+}
+
+.price-duration {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price {
+    align-items: center;
+    color: var(--cyan);
+    display: inline-flex;
+    font-weight: var(--font-medium);
+}
+
+.price svg, .duration svg {
+    margin-right: 6px;
+}
+
+.duration {
+    align-items: center;
+    color: var(--soft-blue);
+    display: inline-flex;
+    font-weight: var(--font-light);
+}
+
+.divider {
+    border-top: 2px solid var(--very-dark-blue-line);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.author {
+    align-items: center;
+    color: var(--white);
+    font-weight: var(--font-light);
+    display: flex;
+}
+
+.avatar {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.text-blue {
+    color: var(--soft-blue);
+}
